@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>(Demo) Egocentric On-screen Sound Source Separation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .container {
+            max-width: 1200px; 
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+        .clip-section {
+            margin-bottom: 40px;
+        }
+        h2 {
+            margin-top: 0;
+        }
+        .video-group {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px; 
+            margin-bottom: 10px;
+        }
+        .video-group video {
+            flex: 1;
+            height: 200px; 
+        }
+        audio {
+            width: 100%;
+            margin-top: 10px;
+        }
+        .info {
+            background-color: #e8f4ff;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 40px;
+            font-size: 1.1em;
+        }
+        .info a {
+            color: #0073e6;
+            text-decoration: none;
+        }
+        .info a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Egocentric On-screen Sound Source Separation Demo</h1>
+    
+    <div class="container">
+        <!-- English informational message with hyperlink -->
+        <div class="info">
+            This page is a demo for the Egocentric On-screen Sound Source Separation Paper. For the dataset recipe, please refer to <a href="https://github.com/Donghyeok-Jo/testtest" target="_blank">https://github.com/Donghyeok-Jo/Ego-OSS</a>.
+        </div>
+        <div class="clip-section">
+            <h2>Example 1</h2>
+            <div class="video-group">
+                <div>
+                    <h3>Original Video</h3>
+                    <video controls>
+                        <source src="Example1/orig.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div>
+                    <h3>Mixed Video (SNR : -2.43dB)</h3>
+                    <video controls>
+                        <source src="Example1/mixed.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div>
+                    <h3>Separated Video (SNR : 20.01dB)</h3>
+                    <video controls>
+                        <source src="Example1/separated.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+
+            <h3>Noise Audio</h3>
+            <audio controls>
+                <source src="Example1/audio2.wav" type="audio/wav">
+                Your browser does not support the audio tag.
+            </audio>
+        </div>
+
+        <div class="clip-section">
+            <h2>Example 2</h2>
+            <div class="video-group">
+                <div>
+                    <h3>Original Video</h3>
+                    <video controls>
+                        <source src="Example2/orig.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div>
+                    <h3>Mixed Video (SNR : -21.21dB)</h3>
+                    <video controls>
+                        <source src="Example2/mixed.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div>
+                    <h3>Separated Video (SNR : 0.49dB)</h3>
+                    <video controls>
+                        <source src="Example2/separated.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+
+            <h3>Noise Audio</h3>
+            <audio controls>
+                <source src="Example2/audio2.wav" type="audio/wav">
+                Your browser does not support the audio tag.
+            </audio>
+        </div>
+
+        <div class="clip-section">
+            <h2>Example 3</h2>
+            <div class="video-group">
+                <div>
+                    <h3>Original Video</h3>
+                    <video controls>
+                        <source src="Example3/orig.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div>
+                    <h3>Mixed Video (SNR : -11.23dB)</h3>
+                    <video controls>
+                        <source src="Example3/mixed.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div>
+                    <h3>Separated Video (SNR : 12.0dB)</h3>
+                    <video controls>
+                        <source src="Example3/separated.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+
+            <h3>Noise Audio</h3>
+            <audio controls>
+                <source src="Example3/audio2.wav" type="audio/wav">
+                Your browser does not support the audio tag.
+            </audio>
+        </div>
+
+        <div class="clip-section">
+            <h2>Example 4</h2>
+            <div class="video-group">
+                <div>
+                    <h3>Original Video</h3>
+                    <video controls>
+                        <source src="Example4/orig.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div>
+                    <h3>Mixed Video (SNR : -13.64dB)</h3>
+                    <video controls>
+                        <source src="Example4/mixed.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div>
+                    <h3>Separated Video (SNR : 9.84dB)</h3>
+                    <video controls>
+                        <source src="Example4/separated.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+
+            <h3>Noise Audio</h3>
+            <audio controls>
+                <source src="Example4/audio2.wav" type="audio/wav">
+                Your browser does not support the audio tag.
+            </audio>
+        </div>
+
+        <div class="clip-section">
+            <h2>Example 5</h2>
+            <div class="video-group">
+                <div>
+                    <h3>Original Video</h3>
+                    <video controls>
+                        <source src="Example5/orig.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div>
+                    <h3>Mixed Video (SNR : -17.71dB)</h3>
+                    <video controls>
+                        <source src="Example5/mixed.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div>
+                    <h3>Separated Video (SNR : -3.79dB)</h3>
+                    <video controls>
+                        <source src="Example5/separated.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+
+            <h3>Noise Audio</h3>
+            <audio controls>
+                <source src="Example5/audio2.wav" type="audio/wav">
+                Your browser does not support the audio tag.
+            </audio>
+        </div>
+        
+        <div class="clip-section">
+            <h2>Example 6</h2>
+            <div class="video-group">
+                <div>
+                    <h3>Original Video</h3>
+                    <video controls>
+                        <source src="Example6/orig.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div>
+                    <h3>Mixed Video (SNR : -1.9dB)</h3>
+                    <video controls>
+                        <source src="Example6/mixed.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div>
+                    <h3>Separated Video (SNR : 19.53dB)</h3>
+                    <video controls>
+                        <source src="Example6/separated.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+
+            <h3>Noise Audio</h3>
+            <audio controls>
+                <source src="Example6/audio2.wav" type="audio/wav">
+                Your browser does not support the audio tag.
+            </audio>
+        </div>
+
+        <div class="clip-section">
+            <h2>Example 7</h2>
+            <div class="video-group">
+                <div>
+                    <h3>Original Video</h3>
+                    <video controls>
+                        <source src="Example7/orig.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div>
+                    <h3>Mixed Video (SNR : -20.4dB)</h3>
+                    <video controls>
+                        <source src="Example7/mixed.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div>
+                    <h3>Separated Video (SNR : 2.19dB)</h3>
+                    <video controls>
+                        <source src="Example7/separated.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+
+            <h3>Noise Audio</h3>
+            <audio controls>
+                <source src="Example7/audio2.wav" type="audio/wav">
+                Your browser does not support the audio tag.
+            </audio>
+        </div>
+
+        <div class="clip-section">
+            <h2>Example 8</h2>
+            <div class="video-group">
+                <div>
+                    <h3>Original Video</h3>
+                    <video controls>
+                        <source src="Example8/orig.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div>
+                    <h3>Mixed Video (SNR : 1.91dB)</h3>
+                    <video controls>
+                        <source src="Example8/mixed.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div>
+                    <h3>Separated Video (SNR : -22.78dB)</h3>
+                    <video controls>
+                        <source src="Example8/separated.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+
+            <h3>Noise Audio</h3>
+            <audio controls>
+                <source src="Example8/audio2.wav" type="audio/wav">
+                Your browser does not support the audio tag.
+            </audio>
+        </div>
+
+        <div class="clip-section">
+            <h2>Example 9</h2>
+            <div class="video-group">
+                <div>
+                    <h3>Original Video</h3>
+                    <video controls>
+                        <source src="Example9/orig.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div>
+                    <h3>Mixed Video (SNR : -15.67dB)</h3>
+                    <video controls>
+                        <source src="Example9/mixed.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div>
+                    <h3>Separated Video (SNR : 8.03dB)</h3>
+                    <video controls>
+                        <source src="Example9/separated.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+
+            <h3>Noise Audio</h3>
+            <audio controls>
+                <source src="Example9/audio2.wav" type="audio/wav">
+                Your browser does not support the audio tag.
+            </audio>
+        </div>
+        
+        <div class="clip-section">
+            <h2>Example 10</h2>
+            <div class="video-group">
+                <div>
+                    <h3>Original Video</h3>
+                    <video controls>
+                        <source src="Example10/orig.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div>
+                    <h3>Mixed Video (SNR : 5.95dB)</h3>
+                    <video controls>
+                        <source src="Example10/mixed.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div>
+                    <h3>Separated Video (SNR : 18.47dB)</h3>
+                    <video controls>
+                        <source src="Example10/separated.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+
+            <h3>Noise Audio</h3>
+            <audio controls>
+                <source src="Example10/audio2.wav" type="audio/wav">
+                Your browser does not support the audio tag.
+            </audio>
+        </div>
+
+        <div class="clip-section">
+            <h2>Example 11</h2>
+            <div class="video-group">
+                <div>
+                    <h3>Original Video</h3>
+                    <video controls>
+                        <source src="Example11/orig.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div>
+                    <h3>Mixed Video (SNR : -18.77dB)</h3>
+                    <video controls>
+                        <source src="Example11/mixed.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div>
+                    <h3>Separated Video (SNR : 2.27dB)</h3>
+                    <video controls>
+                        <source src="Example11/separated.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+
+            <h3>Noise Audio</h3>
+            <audio controls>
+                <source src="Example11/audio2.wav" type="audio/wav">
+                Your browser does not support the audio tag.
+            </audio>
+        </div>
+
+        <div class="clip-section">
+            <h2>Example 12</h2>
+            <div class="video-group">
+                <div>
+                    <h3>Original Video</h3>
+                    <video controls>
+                        <source src="Example12/orig.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div>
+                    <h3>Mixed Video (SNR : 1.66dB)</h3>
+                    <video controls>
+                        <source src="Example12/mixed.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div>
+                    <h3>Separated Video (SNR : 23.51dB)</h3>
+                    <video controls>
+                        <source src="Example12/separated.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+
+            <h3>Noise Audio</h3>
+            <audio controls>
+                <source src="Example12/audio2.wav" type="audio/wav">
+                Your browser does not support the audio tag.
+            </audio>
+        </div>
+        <!-- Add more clips as needed -->
+    </div>
+</body>
+</html>
