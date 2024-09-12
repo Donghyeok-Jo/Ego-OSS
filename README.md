@@ -47,6 +47,6 @@ As the off-screen noise data, we use ESC-50 dataset. The dataset consists of 5-s
 		
 ## Test set recipe
 The file [test_pair.csv](https://github.com/Donghyeok-Jo/Ego-OSS/blob/main/data/test_pair.csv) contains the pairs of on-screen clip and off-screen clip used to evaluate our Ego-OSS model.
-Video clips longer than 5 seconds are sliced into 5-second segments starting from the beginning, as the ESC-50 Dataset consists of 5-second-long data.
+Video clips longer than 5 seconds are sliced into 5-second segments starting from the beginning, as the ESC-50 Dataset consists of 5-second-long samples.
 
  
