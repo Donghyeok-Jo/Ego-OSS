@@ -1,3 +1,4 @@
+audio_path,frame_dir,num_frames
 ../epic_clips_data/audio/train/P21/P21_03_57.mp3,../epic_clips_data/frames/train/P21/P21_03_57,57
 ../epic_clips_data/audio/train/P21/P21_03_62.mp3,../epic_clips_data/frames/train/P21/P21_03_62,30
 ../epic_clips_data/audio/train/P21/P21_04_59.mp3,../epic_clips_data/frames/train/P21/P21_04_59,98
