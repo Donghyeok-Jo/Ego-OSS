@@ -29,7 +29,7 @@ As the on-screen data, we use [EPIC-KITCHENS](https://epic-kitchens.github.io), 
 		* num_frames : int, the number of frames of clip on 8 fps (num_frame >= 24)
 
 ## Off-screen Audio-only Dataset
-As the off-screen noise data, we use ESC-50\cite{b43} dataset. The dataset consists of 5-second-long recordings organized into 50 semantical classes (with 40 examples per class) loosely arranged into 5 major categories.
+As the off-screen noise data, we use ESC-50 dataset. The dataset consists of 5-second-long recordings organized into 50 semantical classes (with 40 examples per class) loosely arranged into 5 major categories.
 
 ### Preparation
 1. Download audios.
